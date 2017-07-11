@@ -9,7 +9,7 @@ Taller de pruebas con travis y coveralls
 
 Para este taller realice lo siguiente:
 
-1. Realice un clone del repositorio con git clone https://github.com/stepquim/monopolio.git
+1. Realice un clone del repositorio con git clone https://github.com/stepquim/Monopolio.git
 
 2. Ingrese a la carpeta cd monopolio
 
