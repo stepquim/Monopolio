@@ -38,7 +38,7 @@ class Test(unittest.TestCase):
         msg = juego3.validar_movimiento(celda3,persona3)
         self.assertEquals(msg,"Sigue jugando")
 
-    #Test5 valida cuando es una propiedad, tiene dinero, decide no comprar la propiedad entonces continua en el juego.
+    #Test5 valida cuando es una propiedad, tiene dinero, decide comprar la propiedad esta propiedad tiene el mismo nombre osea es suya, entonces sigue jugando.
     def test5(self):
         celda3 = Celda("ruben", 1, "Propiedad", 150, 50)
         persona3 = Persona("ruben", 160,"si")
@@ -46,7 +46,7 @@ class Test(unittest.TestCase):
         msg = juego3.validar_movimiento(celda3,persona3)
         self.assertEquals(msg,"Esta proiedad es suya, continua jugando")
 
-    #Test6 valida cuando es una propiedad, tiene dinero, decide no comprar la propiedad entonces continua en el juego.
+    #Test6 valida cuando es una propiedad, tiene dinero, decide comprar la propiedad una propiedad de distinto nombre pero el monto supera a la renta entonces pierde y sale del juego.
     def test6(self):
         celda3 = Celda("jose", 1, "Propiedad", 150, 50)
         persona3 = Persona("ruben", 10,"si")
@@ -54,7 +54,7 @@ class Test(unittest.TestCase):
         msg = juego3.validar_movimiento(celda3,persona3)
         self.assertEquals(msg,"Perdio")
 
-    #Test7 valida cuando es una propiedad, tiene dinero, decide no comprar la propiedad entonces continua en el juego.
+    #Test7 valida cuando es una propiedad, tiene dinero, decide comprar una propiedad de distinto nombre y el monto es mayor que la renta entonces continua en el juego.
     def test7(self):
         celda3 = Celda("jose", 1, "Propiedad", 150, 50)
         persona3 = Persona("ruben", 160,"si")
