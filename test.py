@@ -12,5 +12,9 @@ class Test(unittest.TestCase):
         juego3 = Juego()
         msg = juego3.validar_movimiento(celda3,persona3)
         self.assertEquals(msg,"Usted ha comprado una propiedad")
+
+    #Test2 valida cuando es una propiedad y no tiene dindero
+    def test2(self):
+        pass
 if __name__ == '__main__':
     unittest.main()
