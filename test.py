@@ -101,5 +101,21 @@ class Test(unittest.TestCase):
         # Assert
         self.assertEquals(msg, "No Valido")
 
+    # ===============================================================================================================
+    # Test7: Valida cuando es una propiedad, tiene dinero, decide comprar la propiedad,
+    #        PERO EL JUGADOR ACTUAL ES EL MISMO DUEÑO DE LA PROPIEDAD entonces continua en el juego.
+    #
+    def test7(self):
+        # dueño, numero, tipo, precio, renta
+        celda7 = Celda("Toreto", 1, "Propiedad", 150, 50)
+        # Nombre, monto, comprar
+        persona7 = Persona("Toreto", 160,"si")
+        # Instancia de juego
+        juego7 = Juego()
+        # Celda, Turno-persona
+        msg = juego7.validar_movimiento(celda7,persona7)
+        # Assert
+        self.assertEquals(msg,"Esta proiedad es suya, continua jugando")
+
 if __name__ == '__main__':
     unittest.main()
