@@ -36,7 +36,32 @@ class Test(unittest.TestCase):
         persona4 = Persona("Persona4", 30, "no")
         juego4 = Juego()
         msg = juego4.validar_movimiento(celda4, persona4)
-        self.assertEquals(msg,"Perdio")    
+        self.assertEquals(msg,"Perdio")
+
+    #Test5 valida cuando una celda es propiedad del mismo jugador
+    def test5(self):
+        celda5 = Celda("Propietario", 7, "Propiedad", 100, 40)
+        persona5 = Persona("Propietario", 85, "")
+        juego5 = Juego()
+        msg = juego5.validar_movimiento(celda5, persona5)
+        self.assertEquals(msg, "Esta proiedad es suya, continua jugando")
+
+    #test6 valida cuando la celda no es una propiedad
+    def test6(self):
+        celda6 = Celda("", 2, "no_esPropiedad", 100, 0)
+        persona6 = Persona("persona6", 100, "")
+        juego6 = Juego()
+        msg = juego6.validar_movimiento(celda6, persona6)
+        self.assertEquals(msg, "No Valido")
+
+    #test7 valida cuando una celda es propiedad, no tiene dueño, quiere comprar, no tiene suficiente dinero
+    def test7(self):
+        celda7 = Celda("", 2, "Propiedad", 200, 60)
+        persona7 = Persona("persona6", 50, "si")
+        juego7 = Juego()
+        msg = juego7.validar_movimiento(celda7, persona7)
+        self.assertEquals(msg, "No tiene dinero suficiente")    
+
 
 if __name__ == '__main__':
     unittest.main()
