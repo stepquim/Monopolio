@@ -47,7 +47,7 @@ class Juego:
           else:
             if turnoPersona.monto < celda.renta:
                 print("pierde el juego no tiene dinero para pagar")
-                return "Perdio"
+                return "Perdio" #Done
             else:
                 print("paga la renta")
                 turnoPersona.monto = turnoPersona.monto - celda.renta

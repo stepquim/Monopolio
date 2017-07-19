@@ -13,7 +13,7 @@ class Test(unittest.TestCase):
         msg = juego3.validar_movimiento(celda3,persona3)
         self.assertEquals(msg,"Usted ha comprado una propiedad")
 
-    #Test2 valida rama de No Propiedad
+    #Test2 valida cuando No es una Propiedad
     def test2(self):
         celda3 = Celda("", 1, "No Propiedad", 150, 50)
         persona3 = Persona("Toreto", 160,"si")
@@ -44,6 +44,14 @@ class Test(unittest.TestCase):
         juego3 = Juego()
         msg = juego3.validar_movimiento(celda3,persona3)
         self.assertEquals(msg,"Esta proiedad es suya, continua jugando")
+
+    #Test6 valida cuando es una propiedad, el dueno es diferente a la persona de turno, monto menor que renta, entonces perdio.
+    def test6(self):
+        celda3 = Celda("Gustavo", 1, "Propiedad", 150, 50)
+        persona3 = Persona("Toreto", 25,"no")
+        juego3 = Juego()
+        msg = juego3.validar_movimiento(celda3,persona3)
+        self.assertEquals(msg,"Perdio")
 
 if __name__ == '__main__':
     unittest.main()
