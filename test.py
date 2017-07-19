@@ -46,12 +46,20 @@ class Test(unittest.TestCase):
         self.assertEquals(msg,"Esta proiedad es suya, continua jugando")
 
     #Test6 valida cuando es una propiedad que tiene dueño y monto de la Persona es menor que valor de pago de renta.
-    def test5(self):
+    def test6(self):
         celda3 = Celda("Goku", 1, "Propiedad", 150, 50)
         persona3 = Persona("Toreto", 40,"si")
         juego3 = Juego()
         msg = juego3.validar_movimiento(celda3,persona3)
         self.assertEquals(msg,"Perdio")
+
+    # Test7 valida cuando es una propiedad que tiene dueño y monto de la Persona es mayor que valor de pago de renta, entonces la paga.
+    def test7(self):
+        celda3 = Celda("Goku", 1, "Propiedad", 150, 50)
+        persona3 = Persona("Toreto", 200,"si")
+        juego3 = Juego()
+        msg = juego3.validar_movimiento(celda3,persona3)
+        self.assertEquals(msg,"Usted pago renta")
 
 if __name__ == '__main__':
     unittest.main()
