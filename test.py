@@ -5,7 +5,7 @@ from Monopolio import *
 #from Juego import Juego
 
 class Test(unittest.TestCase):
-    #Test1 valida cuando es una propiedad, tiene dinero, decide comprar la propiedad entonces continua en el juego. (2,4,5,7,8       )
+    #Test1 valida cuando es una propiedad, tiene dinero, decide comprar la propiedad entonces continua en el juego. (2,4,5,7,8          )
     def test1(self):
         print("test1")
         celda3 = Celda("", 1, "Propiedad", 150, 50)
