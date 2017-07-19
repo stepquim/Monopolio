@@ -35,31 +35,31 @@ class Juego:
       if (celda.tipo!="Propiedad"):#1
          # se ejecuta otro codigo
          print("la celda no es una Propiedad")#2
-       return "No Valido"#End
+       return "No Valido"
       else:
         if celda.dueno is "":#3
           if turnoPersona.monto < celda.precio:#4
               print("salio del juego")#5
-              return "No tiene dinero suficiente"#End
+              return "No tiene dinero suficiente"
           else:
         if turnoPersona.comprar=="si":#6
           #puede comprar
           print("paga para ser el dueno")#7
           turnoPersona.monto = turnoPersona.monto - celda.precio
-          return "Usted ha comprado una propiedad"#End
+          return "Usted ha comprado una propiedad"
         else:
-          return "Sigue jugando"#End
+          return "Sigue jugando"
         else:
           if celda.dueno == turnoPersona.nombre:#8
               print("es el mismo dueno")#9
-              return "Esta proiedad es suya, continua jugando"#End
+              return "Esta proiedad es suya, continua jugando"
           else:
             if turnoPersona.monto < celda.renta:#10
                 print("pierde el juego no tiene dinero para pagar")#11
-                return "Perdio"#End
+                return "Perdio"
             else:
                 print("paga la renta")#12
                 turnoPersona.monto = turnoPersona.monto - celda.renta
-                return "Usted pago renta"#End
+                return "Usted pago renta"
 
     
