@@ -5,6 +5,14 @@ from Monopolio import *
 #from Juego import Juego
 
 class Test(unittest.TestCase):
+    # Test0 valida cuando es una propiedad, no tiene dueño, tiene dinero, decide comprar la propiedad entonces continua en el juego.
+    def test0(self):
+        celda0 = Celda("", 1, "", 0, 0)
+        persona0 = Persona("Fernando", 160, "")
+        juego0 = Juego()
+        msg = juego0.validar_movimiento(celda0, persona0)
+        self.assertEquals(msg, "No Valido") #la celda no es una propiedad
+
     #Test1 valida cuando es una propiedad, no tiene dueño, tiene dinero, decide comprar la propiedad entonces continua en el juego.
     def test1(self):
         celda1 = Celda("", 1, "Propiedad", 150, 50)
