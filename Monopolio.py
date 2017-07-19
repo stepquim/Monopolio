@@ -26,7 +26,7 @@ class Juego:
       if (celda.tipo!="Propiedad"):
          # se ejecuta otro codigo
          print("la celda no es una Propiedad")
-    	 return "No Valido"
+		 return "No Valido"
       else:
         if celda.dueno is "":
           if turnoPersona.monto < celda.precio:

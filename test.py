@@ -6,26 +6,33 @@ from Monopolio import *
 
 class Test(unittest.TestCase):
     #Test1 valida cuando es una propiedad, tiene dinero, decide comprar la propiedad entonces continua en el juego.
-    def test1(self):
-        celda3 = Celda("", 1, "Propiedad", 150, 50)
-        persona3 = Persona("Toreto", 160,"si")
-        juego3 = Juego()
-        msg = juego3.validar_movimiento(celda3,persona3)
-        self.assertEquals(msg,"Usted ha comprado una propiedad")
-		
+	def test1(self):
+		celda3 = Celda("", 1, "Propiedad", 150, 50)
+		persona3 = Persona("Toreto", 160,"si")
+		juego3 = Juego()
+		msg = juego3.validar_movimiento(celda3,persona3)
+		self.assertEquals(msg,"Usted ha comprado una propiedad")
+	
 	def test2(self):
-        celda3 = Celda("", 1, "algo", 150, 50)
-        persona3 = Persona("Toreto", 160,"si")
-        juego3 = Juego()
-        msg = juego3.validar_movimiento(celda3,persona3)
-        self.assertEquals(msg,"No Valido")
-		
+		celda3 = Celda("", 1, "algo", 150, 50)
+		persona3 = Persona("Toreto", 160,"si")
+		juego3 = Juego()
+		msg = juego3.validar_movimiento(celda3,persona3)
+		self.assertEquals(msg,"No Valido")
+	
 	def test3(self):
-        celda3 = Celda("", 1, "Propiedad", 150, 50)
-        persona3 = Persona("Toreto", 100,"si")
-        juego3 = Juego()
-        msg = juego3.validar_movimiento(celda3,persona3)
-        self.assertEquals(msg,"No tiene dinero suficiente")
+		celda3 = Celda("", 1, "Propiedad", 150, 50)
+		persona3 = Persona("Toreto", 100,"si")
+		juego3 = Juego()
+		msg = juego3.validar_movimiento(celda3,persona3)
+		self.assertEquals(msg,"No tiene dinero suficiente")
+		
+	def test4(self):
+		celda3 = Celda("", 1, "Propiedad", 150, 50)
+		persona3 = Persona("Toreto", 160,"no")
+		juego3 = Juego()
+		msg = juego3.validar_movimiento(celda3,persona3)
+		self.assertEquals(msg,"Sigue jugando")
 		
 if __name__ == '__main__':
     unittest.main()
