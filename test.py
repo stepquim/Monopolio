@@ -26,5 +26,6 @@ class Test(unittest.TestCase):
         juego3 = Juego()
         msg = juego3.validar_movimiento(celda3,persona3)
         self.assertEquals(msg,"No tiene dinero suficiente")
+		
 if __name__ == '__main__':
     unittest.main()
