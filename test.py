@@ -26,9 +26,10 @@ class Test(unittest.TestCase):
         self.assertEquals(msg, "Usted pago renta")
     def test4(self):
         celda3 = Celda("", 1, "Propiedad", 150, 50) #la propiedad tiene un dueno
-        persona3 = Persona("Toreto", 200, "no") #se asigna la persona que esta jugando con la decision de no comprar
+        persona3 = Persona("Toreto", 100, "no") #se asigna la persona con monto< precio
         juego2 = Juego()
         msg = juego2.validar_movimiento(celda3, persona3)
-        self.assertEquals(msg, "Sigue jugando")
+        self.assertEquals(msg,"No tiene dinero suficiente")
+
 if __name__ == '__main__':
     unittest.main()
