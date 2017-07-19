@@ -53,5 +53,13 @@ class Test(unittest.TestCase):
         msg = juego3.validar_movimiento(celda3,persona3)
         self.assertEquals(msg,"Perdio")
 
+    #Test7 valida cuando es una propiedad, el dueno es diferente a la persona de turno, monto mayor que renta, entonces paga renta.
+    def test7(self):
+        celda3 = Celda("Gustavo", 1, "Propiedad", 150, 50)
+        persona3 = Persona("Toreto", 160,"no")
+        juego3 = Juego()
+        msg = juego3.validar_movimiento(celda3,persona3)
+        self.assertEquals(msg,"Usted pago renta")
+
 if __name__ == '__main__':
     unittest.main()
