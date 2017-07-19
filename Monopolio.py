@@ -26,20 +26,20 @@ class Juego:
       if (celda.tipo!="Propiedad"):
          # se ejecuta otro codigo
          print("la celda no es una Propiedad")
-    	 return "No Valido"
+    	 return "No Valido" # Done
       else:
         if celda.dueno is "":
           if turnoPersona.monto < celda.precio:
               print("salio del juego")
               return "No tiene dinero suficiente"
           else:
-    		if turnoPersona.comprar=="si":
-    			#puede comprar
-    			print("paga para ser el dueno")
-    			turnoPersona.monto = turnoPersona.monto - celda.precio
-    			return "Usted ha comprado una propiedad"
-    		else:
-    			return "Sigue jugando"
+        		if turnoPersona.comprar=="si":
+        			#puede comprar
+        			print("paga para ser el dueno")
+        			turnoPersona.monto = turnoPersona.monto - celda.precio
+        			return "Usted ha comprado una propiedad" # Done
+        		else:
+        			return "Sigue jugando"
         else:
           if celda.dueno == turnoPersona.nombre:
               print("es el mismo dueno")
