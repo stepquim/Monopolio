@@ -16,7 +16,8 @@ class Test(unittest.TestCase):
         msg = juego3.validar_movimiento(celda3,persona3)
         self.assertEquals(msg,"Usted ha comprado una propiedad")
 
-	'''Test2 valida cuando no es propiedad, 
+	'''
+	Test2 valida cuando no es propiedad, 
     '''
     def test2(self):
         celda3 = Celda(dueno="", numero=1, tipo="No Propiedad", precio=150, renta=50)
@@ -26,7 +27,7 @@ class Test(unittest.TestCase):
         self.assertEquals(msg,"No Valido")
 
     '''
-    Test1 valida cuando es una propiedad, 
+    Test3 valida cuando es una propiedad, 
     tiene dinero, decide no comprar la propiedad entonces continua en el juego.
     '''
     def test3(self):
@@ -37,7 +38,7 @@ class Test(unittest.TestCase):
         self.assertEquals(msg,"Sigue jugando")
 
     '''
-    Test1 valida cuando es una propiedad, 
+    Test4 valida cuando es una propiedad, 
     no tiene dinero suficiente
     '''
     def test4(self):
