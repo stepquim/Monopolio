@@ -10,14 +10,15 @@ class Test(unittest.TestCase):
 		celda1 = Celda("", 1, "Propiedad", 150, 50)
 		persona1 = Persona("Toreto", 160,"si")
 		juego1 = Juego()
-		msg = juego3.validar_movimiento(celda1,persona1)
+		msg = juego1.validar_movimiento(celda1,persona1)
 		self.assertEquals(msg,"Usted ha comprado una propiedad")
+
 	def test2(self):
 		celda2 = Celda("",1,"GO", 150, 50)
 		persona2 = Persona("Toreto", 160,"si")
 		juego2 = Juego()
 		msg = juego2.validar_movimiento(celda2,persona2)
-		self.assertEquals(msg,"la celda no es una Propiedad")
+		self.assertEquals(msg,"No Valido")
 	def test3(self):
 		celda3 = Celda("",1,"Propiedad", 150, 50)
 		persona3 = Persona("Toreto", 10,"si")
@@ -41,9 +42,9 @@ class Test(unittest.TestCase):
 		persona6 = Persona("Toreto", 10,"si")
 		juego6 = Juego()
 		msg = juego6.validar_movimiento(celda6,persona6)
-		self.assertEquals(msg,"pierde el juego no tiene dinero para pagar")
+		self.assertEquals(msg,"Perdio")
 	def test7(self):
-		celda7 = Celda("Letty",1,"Propiedad", 150, 50)
+		celda7 = Celda("Letty	",1,"Propiedad", 150, 50)
 		persona7 = Persona("Toreto", 170,"si")
 		juego7 = Juego()
 		msg = juego7.validar_movimiento(celda7,persona7)
