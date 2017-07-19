@@ -24,6 +24,8 @@ Para este taller realice lo siguiente:
 
 4. En el archivo test.py del proyecto se encuentra codificada una prueba de caja blanca de sentencias.
    Codifique las pruebas necesarias para completar un porcentaje de cobertura de 100% (ramas), compruebe como el porcentaje de cobertura aumenta.
+   ###### NOTA: SE RECOMIENDA USAR PYTHON 2.7.X
+   ###### RECUERDE COMENTAR CADA CASO DE PRUEBA QUE REALICE.
    
 5. Corra localmente las pruebas y verifique que se ejecutan sin errores.
 
