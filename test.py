@@ -22,16 +22,16 @@ class Test(unittest.TestCase):
         self.assertEqual(msg,"No Valido")
 
     #Test3 valida cuando  es una propiedad y no tiene suficiente dinero
-    def test2(self):
+    def test3(self):
         celda3 = Celda("Alan", 1, "Propiedad", 250, 130)
         persona3 = Persona("Edison", 100,"si")
         juego3 = Juego()
         msg = juego3.validar_movimiento(celda3,persona3)
-        self.assertEqual(msg,"No tiene dinero suficiente")
+        self.assertEqual(msg,"Perdio")
 
 
     #Test4 valida cuando  es una propiedad y ya es mi propiedad
-    def test2(self):
+    def test4(self):
         celda3 = Celda("Sara", 1, "Propiedad", 250, 130)
         persona3 = Persona("Sara", 300,"si")
         juego3 = Juego()
@@ -40,25 +40,25 @@ class Test(unittest.TestCase):
 
 
     #Test5 valida cuando  es una propiedad,tiene dueño y no tengo dinero para la renta
-    def test2(self):
+    def test5(self):
         celda3 = Celda("Toreto", 1, "Propiedad", 250, 130)
         persona3 = Persona("Sara", 100,"si")
         juego3 = Juego()
         msg = juego3.validar_movimiento(celda3,persona3)
-        self.assertEqual(msg,"pierde el juego no tiene dinero para pagar")
+        self.assertEqual(msg,"Perdio")
 
 
 
     #Test6 valida cuando  es una propiedad,tiene dueño y aun tengo dinero para la renta
-    def test2(self):
+    def test6(self):
         celda3 = Celda("Toreto", 1, "Propiedad", 250, 130)
         persona3 = Persona("Alan", 200,"si")
         juego3 = Juego()
         msg = juego3.validar_movimiento(celda3,persona3)
-        self.assertEquals(msg,"Usted pago renta")
+        self.assertEqual(msg,"Usted pago renta")
 
     #Test7 valida cuando  es una propiedad, no tiene dueño y  tengo dinero pero no se desea comprar
-    def test2(self):
+    def test7(self):
         celda3 = Celda("", 1, "Propiedad", 250, 130)
         persona3 = Persona("Fergie", 300,"no")
         juego3 = Juego()
