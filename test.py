@@ -12,5 +12,14 @@ class Test(unittest.TestCase):
         juego3 = Juego()
         msg = juego3.validar_movimiento(celda3,persona3)
         self.assertEquals(msg,"Usted ha comprado una propiedad")
+
+    #Esta prueba comprueba si la celda no es de tipo propiedad.
+    def test2(self):
+        celda1 = Celda("", 1, "Estado", 150, 50)
+        persona1 = Persona("Juan", 200, "si")
+        juego1 = Juego ()
+        msg = juego1.validar_movimiento(celda1, persona1)
+        self.assertEqual(msg, "No Valido")
+
 if __name__ == '__main__':
     unittest.main()
