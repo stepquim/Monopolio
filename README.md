@@ -11,7 +11,7 @@ Taller de pruebas con travis y coveralls.
 
 Para este taller realice lo siguiente:
 
-##### Acepte la invitación al repositorio la cual fue enviada a su cuenta de github.
+##### Acepte la invitación del repositorio la cual fue enviada a su correo que vinculada su cuenta de github.
 
 1. Realice un clone del repositorio:
 	##### git clone https://github.com/stepquim/Monopolio.git
