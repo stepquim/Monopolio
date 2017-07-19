@@ -22,7 +22,7 @@ class Test(unittest.TestCase):
         persona2 = Persona("Toreto", 160, "si")
         juego2 = Juego()
         msg = juego2.validar_movimiento(celda2, persona2)
-        self.assertEquals(msg, "No valido")
+        self.assertEquals(msg, "No Valido")
     #Test3 cuando no tiene dueño y no tiene dinero para comprar, aunque si desee comprar
     def test3(self):
         celda3 = Celda("", 1, "Propiedad", 150, 50)
