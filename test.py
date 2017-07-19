@@ -12,6 +12,13 @@ class Test(unittest.TestCase):
         juego1 = Juego()
         msg = juego1.validar_movimiento(celda1,persona1)
         self.assertEquals(msg,"No Valido")
+    #Test2 valida cuando es una propiedad,la propiedad no tiene dueno, no tiene dinero suficiente
+    def test2(self):
+        celda2 = Celda("", 1, "Propiedad", 150, 50)
+        persona2 = Persona("Toreto", 120,"si")
+        juego2 = Juego()
+        msg = juego2.validar_movimiento(celda2,persona2)
+        self.assertEquals(msg,"No tiene dinero suficiente")
     #Test3 valida cuando es una propiedad, tiene dinero, decide comprar la propiedad entonces continua en el juego.
     def test3(self):
         celda3 = Celda("", 1, "Propiedad", 150, 50)
