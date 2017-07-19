@@ -48,7 +48,7 @@ class Test(unittest.TestCase):
 
     def test7(self):
         celda3 = Celda("", 1, "Propiedad", 150, 50)
-        persona3 = Persona("JOSE", 60, "si")
+        persona3 = Persona("JOSE", 300, "si")
         juego3 = Juego()
         msg = juego3.validar_movimiento(celda3, persona3)
         self.assertEquals(msg, "Usted pago renta")
