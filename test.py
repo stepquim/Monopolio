@@ -40,7 +40,7 @@ class Test(unittest.TestCase):
         msg = juego3.validar_movimiento(celda3, persona3)
         self.assertEquals(msg, "Esta proiedad es suya, continua jugando")
     def test6(self):
-        celda3 = Celda("JOSE", 1, "Propiedad", 150, 50)
+        celda3 = Celda("", 1, "Propiedad", 150, 50)
         persona3 = Persona("JOSE", 40, "si")
         juego3 = Juego()
         msg = juego3.validar_movimiento(celda3, persona3)
