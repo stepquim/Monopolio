@@ -11,45 +11,46 @@ class Test(unittest.TestCase):
         persona3 = Persona("Toreto", 160,"si")
         juego3 = Juego()
         msg = juego3.validar_movimiento(celda3,persona3)
-        self.assertEquals(msg,"Usted ha comprado una propiedad")
+        self.assertEqual(msg,"Usted ha comprado una propiedad")
     def test2(self):
         celda2= Celda("",1, "p",150,150) #diferente de propiedad
         persona2 = Persona("Toreto", 160, "si") #se crea la persona que  esta jugando
         juego2 = Juego()
         msg= juego2.validar_movimiento(celda2,persona2)
-        self.assertEquals(msg,"No Valido")
+        self.assertEqual(msg,"No Valido")
     def test3(self):
         celda3 = Celda("karen", 1, "Propiedad", 150, 50) #la propiedad tiene un dueno
         persona3 = Persona("Toreto", 200, "si") #se asigna la persona que esta jugando
         juego2 = Juego()
         msg = juego2.validar_movimiento(celda3, persona3)
-        self.assertEquals(msg, "Usted pago renta")
+        self.assertEqual(msg,"Usted pago renta")
     def test4(self):
         celda3 = Celda("", 1, "Propiedad", 150, 50) #la propiedad tiene un dueno
         persona3 = Persona("Toreto", 100, "no") #se asigna la persona con monto< precio
         juego2 = Juego()
         msg = juego2.validar_movimiento(celda3, persona3)
-        self.assertEquals(msg,"No tiene dinero suficiente")
+        self.assertEqual(msg,"No tiene dinero suficiente")
 
     def test5(self):
         celda3 = Celda("Toreto", 1, "Propiedad", 150, 50)  # la propiedad tiene un dueno
         persona3 = Persona("Toreto", 100, "no")  # se asigna la persona con monto< precio pero el es el mismo dueno
         juego2 = Juego()
         msg = juego2.validar_movimiento(celda3, persona3)
-        self.assertEquals(msg, "Esta proiedad es suya, continua jugando")
+        self.assertEqual(msg,"Esta propiedad es suya, continua jugando")
 
     def test6(self):
         celda3 = Celda("", 1, "Propiedad", 150, 50)  # la propiedad tiene un dueno
         persona3 = Persona("Toreto", 200, "no")
         juego2 = Juego()
         msg = juego2.validar_movimiento(celda3, persona3)
-        self.assertEquals(msg, "Sigue jugando")
+        self.assertEqual(msg,"Sigue jugando")
 
     def test7(self):
-        celda3 = Celda("karen", 1, "Propiedad", 150, 150)  # la propiedad tiene un dueno
-        persona3 = Persona("Toreto", 100, "no")
+        celda3 = Celda("karen", 1, "Propiedad", 200, 200)  # la propiedad tiene un dueno
+        persona3 = Persona("Toreto", 10, "no")
         juego2 = Juego()
         msg = juego2.validar_movimiento(celda3, persona3)
-        self.assertEquals(msg,"Perdio")
+        self.assertEqual(msg,"Perdio")
+
 if __name__ == '__main__':
     unittest.main()
