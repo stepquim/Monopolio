@@ -46,7 +46,7 @@ class Test(unittest.TestCase):
 		persona3 = Persona("Toreto", 40,"si")
 		juego3 = Juego()
 		msg = juego3.validar_movimiento(celda3,persona3)
-		self.assertEquals(msg,"pierde el juego no tiene dinero para pagar")
+		self.assertEquals(msg,"Perdio")
 	
 	def test7(self):
 		celda3 = Celda("Joyce", 1, "Propiedad", 150, 50)
