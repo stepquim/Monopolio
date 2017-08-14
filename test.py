@@ -1,8 +1,5 @@
 import unittest
 from Monopolio import *
-#from Celda import Celda
-#from Persona import Persona
-#from Juego import Juego
 
 class Test(unittest.TestCase):
     #Test1 valida cuando es una propiedad, tiene dinero, decide comprar la propiedad entonces continua en el juego.
