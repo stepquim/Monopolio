@@ -36,3 +36,5 @@ Para este taller realice lo siguiente:
 
 ##### Nota : Para ver el porcentaje de cobertura de su rama ir a https://coveralls.io/github/stepquim/Monopolio.
 	
+
+[![Coverage Status](https://coveralls.io/repos/github/stepquim/Monopolio/badge.svg?branch=ebozag)](https://coveralls.io/github/stepquim/Monopolio?branch=ebozag)
