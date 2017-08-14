@@ -56,7 +56,7 @@ class Test7(unittest.TestCase):
         persona7 = Persona("Christian", 100,"si")
         juego7= Juego()
         msg = juego7.validar_movimiento(celda7,persona7)
-        self.assertEquals(msg,"Perdio")
+        self.assertEquals(msg,"Esta proiedad es suya, continua jugando")
 
 class Test8(unittest.TestCase):
     #Test7 valida cuando es una propiedad, no tiene dinero
@@ -65,7 +65,7 @@ class Test8(unittest.TestCase):
         persona8 = Persona("Christian", 180,"si")
         juego8= Juego()
         msg = juego8.validar_movimiento(celda8,persona8)
-        self.assertEquals(msg,"Usted pago renta")
+        self.assertEquals(msg,"Esta proiedad es suya, continua jugando")
 		
 if __name__ == '__main__':
     unittest.main()
