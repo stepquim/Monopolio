@@ -21,7 +21,7 @@ class Test2(unittest.TestCase):
         persona2 = Persona("Christian", 160,"si")
         juego2= Juego()
         msg = juego2.validar_movimiento(celda2,persona2)
-        self.assertEquals(msg,"No valido")
+        self.assertEquals(msg,"No Valido")
 
 		
 if __name__ == '__main__':
