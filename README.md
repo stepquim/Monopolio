@@ -34,5 +34,6 @@ Para este taller realice lo siguiente:
 7. Haga el push sobre su rama:
 	git push origin su_nombre_usuario_github(puede hacer tantos commits y push como sean necesarios hasta que todo esté correcto)
 
+##### Nota : Para ver la ejecución de sus pruebas ir a https://travis-ci.org/stepquim/Monopolio
 ##### Nota : Para ver el porcentaje de cobertura de su rama ir a https://coveralls.io/github/stepquim/Monopolio.
 	
